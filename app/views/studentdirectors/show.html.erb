@@ -1,0 +1,39 @@
+
+<% the_id = params["id"] %>
+<% the_studentdirector = Studentdirector.read(the_id) %>
+
+<h3> 
+	<div class="col-md-10 pull right">
+			
+		<%= image_tag the_studentdirector["photo_url"], "width" => "100" %>
+		<%= the_studentdirector["name"] %> manages the following apartments:
+	</div>
+
+</h3>
+
+
+
+<% apartmenttypes = Apartmenttype.where("studentdirector_id" => the_studentdirector["id"]) %>
+
+<div class = "row">
+</div>
+		<hr>
+		
+
+<ul>
+</ul>
+
+  <% apartmenttypes.each do |apartmenttype| %>
+  	<ul>
+        <img src="<%= apartmenttype["poster_url"] %>" width="80">
+        	<strong>
+        		<%= apartmenttype["title"] %>
+        	</strong> 
+        		($<%= apartmenttype["rent"] %> per month).
+    </ul>    		
+	<p>
+	</p>
+
+<% end %>
+<hr>
+

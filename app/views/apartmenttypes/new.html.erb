@@ -1,0 +1,37 @@
+<div class="page-header">
+  <h1>Add a New Apartmenttype</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+
+    <%= form_tag "/apartmenttypes", "method" => "post"  %>
+
+      <div class="form-group">
+        <%= label_tag "title", "What is the title/type of the apartment?" %>
+        <%= text_field_tag "title", "", "class" => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag "rent", "Rent" %>
+        <%= text_field_tag "rent", "", "class" => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag "rent", "Link to a poster image" %>
+        <%= text_field_tag "url", "", "class" => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag "chosen_studentdirector_id", "Choose a Studentdirector:" %>
+        <%= select_tag "chosen_studentdirector_id",
+                       options_from_collection_for_select(Studentdirector.read.order("name"),
+                        "id",
+                        "name"), "class" => "form-control" %>
+      </div>
+
+      <%= submit_tag "Add This Apartment type", "class" => "btn btn-lg btn-primary" %> or <%= link_to "Cancel", "/apartmenttypes" %>
+
+    </form>
+</div>
+</div>

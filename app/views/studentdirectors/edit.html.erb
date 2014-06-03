@@ -1,0 +1,20 @@
+<% studentdirector = Studentdirector.find_by("id" => params["id"]) %>
+
+<h1>Edit Studentdirector #<%= studentdirector["id"] %></h1>
+
+<!-- This won't work!  It will send a GET request instead. -->
+<form action="/studentdirectors/<%= studentdirector["id"] %>" method="patch">
+
+  <p>
+    <label>What is the studentdirector's name?</label>
+    <input type="text" name="full_name" value="<%= studentdirector["name"] %>">
+  </p>
+
+  <p>
+    <label>Do you have a link to a photo?</label>
+    <input type="text" name="url" value="<%= studentdirector["photo_url"] %>">
+  </p>
+
+  <input type="submit"> or <a href="/studentdirectors">Cancel</a>
+
+</form>

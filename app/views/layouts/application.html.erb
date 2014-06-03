@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deependra Ojha: McManus living center</title>
+
+    <%= stylesheet_link_tag    "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" %>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+
+    <%= csrf_meta_tags %>
+  </head>
+  
+  
+
+    <div class="container">
+      <div class="header">
+        <div class="row">
+          <div class="col-md-12 well aside">
+            <b> <h1>McManus Housing Center </h1> </b>
+          
+    <body>    
+
+        <div class="row">
+          <div class="col-md-8">
+            <%= link_to "Apartment types", "/apartmenttypes", "class" => "item-link"  %> |
+            <%= link_to "Apartment student directors", "/studentdirectors" %> |
+            <%= link_to "Applicant profiles", "/userprofiles" %> 
+          </div>
+          <div class="pull-right">
+            <% user = User.find_by("id" => cookies["user_id"]) %>
+             <% if user.present? %>
+               <%= user["name"] %>
+              <%= link_to "My Profile", "/users/#{user["id"]}" %> |
+              <%= link_to "Sign Out", '/logout' %>
+              <% else %> 
+              <%= link_to "Sign Up", '/users/new' %> |
+              <%= link_to "Sign In", '/login' %> 
+            <% end %>
+
+          </div>
+        </div>
+        
+      </div>
+        </div>
+          </div> 
+
+      <hr>
+        <h4 class="text-warning"><%= notice %></h4>
+      <%= yield %>
+
+  <div>
+ 
+  </body>
+
+</html>

@@ -1,0 +1,27 @@
+
+<% userprofile = Userprofile.find_by("id" => params["id"]) %>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2><%= userprofile["name"] %></h2>
+    <%= image_tag userprofile["photo_url"] %>
+  </div>
+  <div class="col-md-8">
+    <h2>Applicant preferences</h2>
+
+    <% userpreferences = Userpreference.where("userprofile_id" => userprofile["id"]) %>
+
+    <ul>
+      <% userpreferences.each do |userpreference| %>
+        <% apartmenttype = Apartmenttype.find_by("id" => userpreference["apartmenttype_id"]) %>
+        <li>
+          <%= userpreference["preference"] %>
+          in
+          <%= link_to apartmenttype["title"], "/apartmenttypes/#{apartmenttype["id"]}" %>
+        </li>
+      <% end %>
+    </ul>
+
+  </div>
+</div>
+

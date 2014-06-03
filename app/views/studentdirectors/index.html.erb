@@ -1,0 +1,27 @@
+
+<% all_studentdirectors = Studentdirector.read %>
+
+<h2>List of student directors</h2>
+
+
+<ul>
+
+  <% all_studentdirectors.each do |studentdirector| %>
+
+    
+      <%= image_tag studentdirector["photo_url"], "width" => "130", "height" => "130" %>
+      <h4> <%= link_to studentdirector["name"], "/studentdirectors/#{studentdirector["id"]}" %>
+            (<%= link_to "Delete", "/studentdirectors/#{studentdirector["id"]}", "method" => "delete" %>) </h4>
+    
+    <hr>
+  <% end %>
+
+          <%= image_tag "http://www.clipartbest.com/cliparts/dT8/k76/dT8k76aTe.jpeg", "width" => "130", "height" => "130" %>
+      <h3> <%= link_to "Add a New Student director", "/studentdirectors/new", "class" => 'btn btn btn-primary' %> </h3>
+    
+
+</ul>
+
+
+  
+

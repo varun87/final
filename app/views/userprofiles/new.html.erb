@@ -1,0 +1,46 @@
+<h2>Add a New Applicant</h2>
+
+<%= form_tag "/userprofiles", "method" => "post" %>
+
+  <p>
+    <%= label_tag "full_name", "What is the Applicant's name?" %>
+    <%= text_field_tag "full_name" %>
+  </p>
+
+  <p>
+    <%= label_tag "url", "Do you have a link to a photo?" %>
+    <%= text_field_tag "url" %>
+  </p>
+
+<%= submit_tag %> or <%= link_to "Cancel", "/userprofiles" %>
+
+</form>
+
+
+
+
+
+<%#
+<%= form_tag "/userpreferences", "method" => "post" %>
+
+
+  <%#<p> 
+    <%= label_tag "url", "What is your preference for a roomate?" %>
+    <%#<%= text_field_tag "url" %>
+  <%#</p>
+
+<p>
+  	    <div class="col-md-15">
+        <%= label_tag "chosen_apartmenttype_id", "Choose an Apartment type:" %>
+    
+     <%#   <%= select_tag "chosen_apartmenttype_id",
+                       options_from_collection_for_select(Apartmenttype.read.order("title"),
+                        "id",
+                        "title"), "class" => "form-control" %>
+      	
+      
+    <%#  </div>
+   </p>
+
+</form>
+<%= submit_tag %> <%#  or <%= link_to "Cancel", "/userprofiles" %>

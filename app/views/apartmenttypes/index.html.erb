@@ -1,0 +1,78 @@
+
+
+    <ul> 
+    </ul>  
+  <div class="col-md-30">
+  <h2>List of apartment types</h2>
+
+        </div>
+  
+        <div class="col-md-8">
+
+        <% Apartmenttype.read.order("title desc").each do |apartmenttype| %>
+
+      <div class="row apartmenttype">
+
+        <div class="col-md-8">
+          <h3>
+            <%= link_to apartmenttype["title"], "/apartmenttypes/#{apartmenttype["id"]}" %>
+        
+              <div class="col-md-6 pull right">
+              <%= link_to image_tag(apartmenttype["poster_url"], "width" => "130", "height" => "130"), "/apartmenttypes/#{apartmenttype["id"]}"%>
+              </div>
+        
+          </h3>
+            <p>Rent: $<%= apartmenttype["rent"] %> per month</p>
+
+                <% studentdirector = Studentdirector.find_by("id" => apartmenttype["director_id"]) %>
+                <% if studentdirector.present? %>
+            <p>Student director <%= studentdirector["name"] %></p>
+            
+            <p>          </p>
+          
+          <% end %>
+        
+
+        
+        </div>
+
+      </div>
+    
+    <% end %>
+  
+
+  <hr>
+    <div class="col-md-6 pull right">
+       <%= link_to "Click to add a New Apartment type", "/apartmenttypes/new", "class" => 'btn btn-lg btn-primary' %>
+    </div>  
+
+</div>
+
+
+
+
+
+
+<div class="col-md-1000 pull right">
+    <h2>Key facts</h2>
+       <ul>
+      <li>McManus has <%= Apartmenttype.count %> apartment types.</li>
+
+      <li>The costliest apartment type is <em><%= Apartmenttype.read.order("rent desc").first["title"] %> </em>for $<%= Apartmenttype.read.order("rent desc").first["rent"] %> per month.</li>
+      
+      <li>The cheapest apartment type is <em><%= Apartmenttype.read.order("rent asc").first["title"] %></em> for $<%= Apartmenttype.read.order("rent asc").first["rent"] %> per month.</li>
+
+<li>McManus has <%= Studentdirector.count %> student directors responsible for all the apartment types.</li>
+      <li>
+        <% random_studentdirector = Studentdirector.sample %>
+        <% number_of_apartmenttypes = Apartmenttype.where(:studentdirector_id => random_studentdirector["id"]).count %>
+        One of our Student directors is <%= random_studentdirector["name"] %>, 
+        who heads <%= pluralize(number_of_apartmenttypes, "apartment type") %>.
+      </li>
+    
+
+    </ul>
+    <a href="http://www.kellogg.northwestern.edu/stu_aff/housing"> To know more, click here for the official McManus website</a>.
+  
+
+</div>

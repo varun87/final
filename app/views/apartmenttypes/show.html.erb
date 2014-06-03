@@ -1,0 +1,116 @@
+<% apartmenttype_id = params["id"] %>
+<% apartmenttype = Apartmenttype.read(apartmenttype_id) %>
+
+<div class="row">
+
+    <div class="col-md-5">
+    <h3> <b> <%= apartmenttype["title"] %> apartment</h3> </b>
+      <ul> <h4> Rent: $<%= apartmenttype["rent"] %> per month
+
+              <% avg = Review.where("apartmenttype_id" => apartmenttype["id"]).average(:rating).to_i %>
+                <h4>
+
+                Avg Rating: <% avg.times do %> &star;
+                  <% end %>  
+
+                </h4>
+      </ul>
+    
+      <ul>
+    <% studentdirector = Studentdirector.find_by("id" => apartmenttype["studentdirector_id"]) %>
+    <% if studentdirector.present? %>
+      <h4>Student director is <%= link_to studentdirector["name"], "/studentdirectors/#{studentdirector["id"]}" %></h4>
+    <% end %>
+      </ul>
+</div>
+
+
+
+<div class="col-md-7">
+    <%= image_tag(apartmenttype["poster_url"],"width"=> 240) %>
+  </div>
+
+</div>  
+<hr>
+
+
+<div class="row">
+  <div class="col-md-10">
+    <h3> <b> Applicants who have expressed interest</h3></b>
+
+    <% userpreferences = Userpreference.where("apartmenttype_id" => apartmenttype["id"]) %>
+
+    
+     <% userpreferences.each do |userpreference| %>
+        
+            
+            <% userprofile = Userprofile.find_by("id" => userpreference["userprofile_id"]) %>
+        
+        <% if userprofile.present? %>
+          <h4> <ul>
+            <%= link_to userprofile["name"], "/userprofiles/#{userprofile["id"]}" %>
+            wants to live in this apartment with the preference of "
+            <%= userpreference["preference"] %>"
+          </ul> </h4>
+        <% end %>      
+    
+  
+    <% end %>
+    </ul>
+
+  <hr>
+
+    <h3> <b> Reviews </h3> </b>
+
+    <% if Review.where("apartmenttype_id" => apartmenttype["id"]).count == 0 %>
+      <p>You are the first to write a review!</p>
+    <% end %>
+
+   
+    <% Review.where("apartmenttype_id" => apartmenttype["id"]).each do |review| %>
+      <% the_user = User.find_by("id" => review["user_id"]) %>
+      
+        
+          <h4> <ul> 
+            <% if the_user.present? %>
+              Rating: <%= review.rating %>, Comment:
+          <% end %>
+        
+        <% if review.present? %>
+          <%= review.content %>
+        <% else %> has not provided comments
+         <% end %>
+
+          </h4> </ul> 
+      
+
+    <% end %>
+
+
+  </div>
+</div>
+
+<hr>
+<p>
+ <%= form_tag "/reviews" do %>
+
+      <%= hidden_field_tag "apartmenttype_id", apartmenttype["id"] %>
+
+      <div class="form-group">
+        
+        <%= submit_tag "Please enter a review below and click to submit", "class" => "btn btn-md btn-primary" %>
+        
+        <p>
+        <%= text_area_tag :content, "", "class" => "form-control", "placeholder" => "Please provide your comments!", "rows" => "col-md-4" %>
+        
+        <%= label_tag :rating %>
+        <%= select_tag :rating, options_for_select(['5 stars','4 stars','3 stars','2 stars','1 star']) %>
+        </p>
+      </div>
+
+      
+    <% end %>
+</p>
+
+
+

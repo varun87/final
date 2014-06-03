@@ -1,0 +1,18 @@
+== README
+
+Once you've started up your virtual machine and connected to it (with "vagrant ssh"), there are two ways you can get this code:
+
+First, you can try the `catchup` command.  This command will attempt to connect to this repository and replace any code you have with the latest code here.
+
+Alternatively, you can try this sequence:
+
+1. Close Sublime Text.  If your rails server or console are running, stop them.
+3. Using Windows Explorer/Mac Finder, completely delete your imdb folder.
+2. In your vagrant@ command prompt: cd ~/code/projects
+4. git clone https://github.com/kiei925-spring14/imdb
+5. cd imdb
+6. bundle install --without production
+7. rake ez:tables
+8. rake db:seed
+
+

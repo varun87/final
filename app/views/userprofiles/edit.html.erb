@@ -1,0 +1,19 @@
+<% userprofile = Userprofile.find_by("id" => params["id"]) %>
+
+<h1>Edit Applicant profile #<%= userprofile["id"] %></h1>
+
+<%= form_tag "/userprofiles#{userprofile["id"]}", "method" => "patch" %>
+
+  <p>
+    <%= label_tag "full_name", "What is the Applicant's name?" %>
+    <%= text_field_tag "full_name", userprofile["name"] %>
+  </p>
+
+  <p>
+    <%= label_tag "url", "Do you have a link to the a photo?" %>
+    <%= text_field_tag "url", userprofile["url"] %>
+  </p>
+
+  <%= submit_tag %> or <%= link_to "Cancel", "/userprofiles" %>
+
+</form>

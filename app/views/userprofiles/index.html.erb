@@ -1,0 +1,14 @@
+
+<h2>List of Applicants </h2>
+
+  <% Userprofile.read.order("name").each do |userprofile| %>
+    <ul> <h4>
+      <%= link_to userprofile["name"], "/userprofiles/#{userprofile["id"]}" %>
+      <%= link_to "(Delete)", "/userprofiles/#{userprofile["id"]}", "method" => "delete" %>
+      <%#= link_to "(Edit)", "/userprofiles/#{userprofile["id"]}/edit" %>
+    </ul> </h4>
+  <% end %>
+
+  <h4> <ul> <%= link_to "Add a New Applicant", "/userprofiles/new", "class" => 'btn btn btn-primary' %> </ul> </h4>
+
+
