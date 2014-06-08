@@ -27302,3 +27302,116 @@ Processing by ApartmenttypesController#index as HTML
   Rendered apartmenttypes/index.html.erb within layouts/application (35.0ms)
   [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
 Completed 200 OK in 85ms (Views: 78.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-06-08 04:39:25 +0000
+Processing by ApartmenttypesController#index as HTML
+  [1m[36mApartmenttype Load (10.1ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY title desc[0m
+  [1m[35mStudentdirector Load (2.1ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "apartmenttypes"[0m
+  [1m[35mApartmenttype Load (1.5ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent desc LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent desc LIMIT 1[0m
+  [1m[35mApartmenttype Load (1.6ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent asc LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent asc LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "studentdirectors"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "studentdirectors"[0m
+  [1m[35mStudentdirector Load (1.7ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" ORDER BY "studentdirectors"."id" ASC LIMIT 1 OFFSET 0
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "apartmenttypes" WHERE "apartmenttypes"."studentdirector_id" = 19[0m
+  Rendered apartmenttypes/index.html.erb within layouts/application (125.7ms)
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 463ms (Views: 401.2ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-06-08 04:39:26 +0000
+Processing by ApartmenttypesController#index as HTML
+  [1m[36mApartmenttype Load (1.3ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY title desc[0m
+  [1m[35mStudentdirector Load (1.5ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "apartmenttypes"[0m
+  [1m[35mApartmenttype Load (1.4ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent desc LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent desc LIMIT 1[0m
+  [1m[35mApartmenttype Load (1.5ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent asc LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent asc LIMIT 1[0m
+  [1m[35m (1.7ms)[0m  SELECT COUNT(*) FROM "studentdirectors"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "studentdirectors"[0m
+  [1m[35mStudentdirector Load (2.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" ORDER BY "studentdirectors"."id" ASC LIMIT 1 OFFSET 2
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "apartmenttypes" WHERE "apartmenttypes"."studentdirector_id" = 22[0m
+  Rendered apartmenttypes/index.html.erb within layouts/application (35.5ms)
+  [1m[35mUser Load (2.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 148ms (Views: 131.7ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-06-08 04:39:31 +0000
+Processing by ApartmenttypesController#index as HTML
+  [1m[36mApartmenttype Load (2.1ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY title desc[0m
+  [1m[35mStudentdirector Load (1.6ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "apartmenttypes"[0m
+  [1m[35mApartmenttype Load (1.6ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent desc LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent desc LIMIT 1[0m
+  [1m[35mApartmenttype Load (1.6ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent asc LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent asc LIMIT 1[0m
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "studentdirectors"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "studentdirectors"[0m
+  [1m[35mStudentdirector Load (1.4ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" ORDER BY "studentdirectors"."id" ASC LIMIT 1 OFFSET 1
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "apartmenttypes" WHERE "apartmenttypes"."studentdirector_id" = 20[0m
+  Rendered apartmenttypes/index.html.erb within layouts/application (36.7ms)
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 146ms (Views: 129.5ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/apartmenttypes/102" for 10.0.2.2 at 2014-06-08 04:39:40 +0000
+Processing by ApartmenttypesController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mApartmenttype Load (1.5ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" WHERE "apartmenttypes"."id" = 102 LIMIT 1[0m
+  [1m[35m (1.8ms)[0m  SELECT AVG("reviews"."rating") AS avg_id FROM "reviews" WHERE "reviews"."apartmenttype_id" = 102
+  [1m[36mStudentdirector Load (1.4ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" = 21 LIMIT 1[0m
+  [1m[35mUserpreference Load (1.7ms)[0m  SELECT "userpreferences".* FROM "userpreferences" WHERE "userpreferences"."apartmenttype_id" = 102
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."apartmenttype_id" = 102[0m
+  [1m[35mReview Load (1.9ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."apartmenttype_id" = 102
+  Rendered apartmenttypes/show.html.erb within layouts/application (77.7ms)
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 180ms (Views: 166.1ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-06-08 04:44:54 +0000
+Processing by ApartmenttypesController#index as HTML
+  [1m[35mApartmenttype Load (1.6ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY title desc
+  [1m[36mStudentdirector Load (1.6ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "apartmenttypes"
+  [1m[36mApartmenttype Load (1.9ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent desc LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent desc LIMIT 1
+  [1m[36mApartmenttype Load (1.6ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent asc LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent asc LIMIT 1
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "studentdirectors"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "studentdirectors"
+  [1m[36mStudentdirector Load (1.7ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" ORDER BY "studentdirectors"."id" ASC LIMIT 1 OFFSET 0[0m
+  [1m[35m (2.6ms)[0m  SELECT COUNT(*) FROM "apartmenttypes" WHERE "apartmenttypes"."studentdirector_id" = 19
+  Rendered apartmenttypes/index.html.erb within layouts/application (39.5ms)
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 153ms (Views: 136.0ms | ActiveRecord: 16.3ms)
+  [1m[36m (1.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (5.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140608044943')
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m

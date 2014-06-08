@@ -35,7 +35,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     erubis (2.7.0)
-    execjs (2.1.0)
+    execjs (2.2.0)
     ez (0.9.0)
       hirb (~> 0.7.1)
     hike (1.2.3)
