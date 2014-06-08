@@ -27415,3 +27415,110 @@ Completed 200 OK in 153ms (Views: 136.0ms | ActiveRecord: 16.3ms)
   [1m[36m (1.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (5.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140608044943')
   [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (1.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (23.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140608052204')
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (5.7ms)[0m  DELETE FROM "studentdirectors"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "studentdirectors" ("name", "photo_url") VALUES (?, ?)  [["name", "Aman Adhonom"], ["photo_url", "http://o.quizlet.com/DoO4I88FxXFiEmlwpjpkKA_m.jpg"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "studentdirectors" ("name", "photo_url") VALUES (?, ?)[0m  [["name", "Sonia Siu"], ["photo_url", "http://2.bp.blogspot.com/_QM2-6hVKZbQ/S-Oem-U4LeI/AAAAAAAAKU8/FlZAHLSBo6U/s1600/sonia_sui3.jpg"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "studentdirectors" ("name", "photo_url") VALUES (?, ?)  [["name", "Bruno Valle"], ["photo_url", "https://s3.amazonaws.com/photos.angel.co/users/410691-medium_jpg?1380748667"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (5.8ms)[0m  DELETE FROM "apartmenttypes"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.8ms)[0m  INSERT INTO "apartmenttypes" ("poster_url", "rent", "studentdirector_id", "title") VALUES (?, ?, ?, ?)  [["poster_url", "http://www.kellogg.northwestern.edu/stu_aff/housing/images/units/twinstudio_1.jpg"], ["rent", 915], ["studentdirector_id", 23], ["title", "Twin studio"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "apartmenttypes" ("poster_url", "rent", "studentdirector_id", "title") VALUES (?, ?, ?, ?)[0m  [["poster_url", "http://www.kellogg.northwestern.edu/stu_aff/housing/images/units/twinstudio_5.jpg"], ["rent", 1092], ["studentdirector_id", 24], ["title", "Two bedroom"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "apartmenttypes" ("poster_url", "rent", "studentdirector_id", "title") VALUES (?, ?, ?, ?)  [["poster_url", "http://www.kellogg.northwestern.edu/stu_aff/housing/images/units/twinstudio_3.jpg"], ["rent", 1092], ["studentdirector_id", 25], ["title", "Single studio"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "apartmenttypes" ("poster_url", "rent", "studentdirector_id", "title") VALUES (?, ?, ?, ?)[0m  [["poster_url", "http://www.kellogg.northwestern.edu/stu_aff/housing/images/units/efficiency_2.jpg"], ["rent", 1445], ["studentdirector_id", 25], ["title", "One bedroom"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "apartmenttypes" ("poster_url", "rent", "studentdirector_id", "title") VALUES (?, ?, ?, ?)  [["poster_url", "http://www.kellogg.northwestern.edu/stu_aff/housing/images/units/efficiency_1.jpg"], ["rent", 1563], ["studentdirector_id", 24], ["title", "Family"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (5.8ms)[0m  DELETE FROM "userprofiles"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "userprofiles" ("name", "photo_url") VALUES (?, ?)  [["name", "Deependra Ojha"], ["photo_url", "http://www.name-list.net/img/images.php/Deependra_4.jpg"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "userprofiles" ("name", "photo_url") VALUES (?, ?)[0m  [["name", "Neha Bansal"], ["photo_url", "http://clubm.in/sites/default/files/ClubM/story/images/hero_large10.jpg"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "userprofiles" ("name", "photo_url") VALUES (?, ?)  [["name", "Meghna Ojha"], ["photo_url", "http://m.c.lnkd.licdn.com/mpr/mpr/shrink_80_80/p/2/005/019/0b8/2adb806.jpg"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (5.6ms)[0m  DELETE FROM "userpreferences"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "userpreferences" ("apartmenttype_id", "preference", "userprofile_id") VALUES (?, ?, ?)  [["apartmenttype_id", 106], ["preference", "No flat mates"], ["userprofile_id", 90]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "userpreferences" ("apartmenttype_id", "preference", "userprofile_id") VALUES (?, ?, ?)[0m  [["apartmenttype_id", 104], ["preference", "1 male flatmate"], ["userprofile_id", 90]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "userpreferences" ("apartmenttype_id", "preference", "userprofile_id") VALUES (?, ?, ?)  [["apartmenttype_id", 106], ["preference", "No flat mates"], ["userprofile_id", 91]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "userpreferences" ("apartmenttype_id", "preference", "userprofile_id") VALUES (?, ?, ?)[0m  [["apartmenttype_id", 105], ["preference", "1 female flat mate"], ["userprofile_id", 91]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.7ms)[0m  INSERT INTO "userpreferences" ("apartmenttype_id", "preference", "userprofile_id") VALUES (?, ?, ?)  [["apartmenttype_id", 105], ["preference", "With spouse"], ["userprofile_id", 92]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "userpreferences" ("apartmenttype_id", "preference", "userprofile_id") VALUES (?, ?, ?)[0m  [["apartmenttype_id", 108], ["preference", "With spouse"], ["userprofile_id", 92]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mSQL (5.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "users" ("name", "password", "username") VALUES (?, ?, ?)[0m  [["name", "Neha Bansal"], ["password", "nehabansal"], ["username", "nehabansal"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "users" ("name", "password", "username") VALUES (?, ?, ?)  [["name", "Deependra Ojha"], ["password", "deependraojha"], ["username", "deependraojha"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (5.5ms)[0m  DELETE FROM "reviews"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (37.4ms)[0m  INSERT INTO "reviews" ("apartmenttype_id", "content", "created_at", "rating", "user_id") VALUES (?, ?, ?, ?, ?)  [["apartmenttype_id", 108], ["content", "Spacious"], ["created_at", Sun, 08 Jun 2014 05:22:09 UTC +00:00], ["rating", 5], ["user_id", 29]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "reviews" ("apartmenttype_id", "content", "created_at", "rating", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["apartmenttype_id", 104], ["content", "Great apartment"], ["created_at", Sun, 08 Jun 2014 05:22:10 UTC +00:00], ["rating", 5], ["user_id", 29]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "reviews" ("apartmenttype_id", "content", "created_at", "rating", "user_id") VALUES (?, ?, ?, ?, ?)  [["apartmenttype_id", 105], ["content", "Good but not great"], ["created_at", Sun, 08 Jun 2014 05:22:10 UTC +00:00], ["rating", 4], ["user_id", 28]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "reviews" ("apartmenttype_id", "content", "created_at", "rating", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["apartmenttype_id", 108], ["content", "Too spacious"], ["created_at", Sun, 08 Jun 2014 05:22:10 UTC +00:00], ["rating", 4], ["user_id", 28]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "reviews" ("apartmenttype_id", "content", "created_at", "rating", "user_id") VALUES (?, ?, ?, ?, ?)  [["apartmenttype_id", 105], ["content", "Not clean"], ["created_at", Sun, 08 Jun 2014 05:22:10 UTC +00:00], ["rating", 3], ["user_id", 29]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.7ms)[0m  SELECT COUNT(*) FROM "apartmenttypes"
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "studentdirectors"[0m
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "userprofiles"
+
+
+Started GET "/" for 10.0.2.2 at 2014-06-08 06:35:07 +0000
+Processing by ApartmenttypesController#index as HTML
+  [1m[36mApartmenttype Load (75.3ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY title desc[0m
+  [1m[35mStudentdirector Load (1.8ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" WHERE "studentdirectors"."id" IS NULL LIMIT 1
+  [1m[36m (1.9ms)[0m  [1mSELECT COUNT(*) FROM "apartmenttypes"[0m
+  [1m[35mApartmenttype Load (1.9ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent desc LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent desc LIMIT 1[0m
+  [1m[35mApartmenttype Load (1.7ms)[0m  SELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent asc LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "apartmenttypes".* FROM "apartmenttypes" ORDER BY rent asc LIMIT 1[0m
+  [1m[35m (2.5ms)[0m  SELECT COUNT(*) FROM "studentdirectors"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "studentdirectors"[0m
+  [1m[35mStudentdirector Load (1.8ms)[0m  SELECT "studentdirectors".* FROM "studentdirectors" ORDER BY "studentdirectors"."id" ASC LIMIT 1 OFFSET 2
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "apartmenttypes" WHERE "apartmenttypes"."studentdirector_id" = 25[0m
+  Rendered apartmenttypes/index.html.erb within layouts/application (184.0ms)
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 638ms (Views: 515.5ms | ActiveRecord: 95.1ms)
