@@ -14,5 +14,5 @@ Alternatively, you can try this sequence:
 6. bundle install --without production
 7. rake ez:tables
 8. rake db:seed
-
+9. Codeship Status https://codeship.io/projects/c42d0df0-d2f9-0131-cbcd-12e285eff8b9/status
 
