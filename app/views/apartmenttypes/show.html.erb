@@ -11,11 +11,11 @@
                 <h4>
 
                 Avg Rating: <% avg.times do %> &star;
-                  <% end %>  
+                  <% end %>
 
                 </h4>
       </ul>
-    
+
       <ul>
     <% studentdirector = Studentdirector.find_by("id" => apartmenttype["studentdirector_id"]) %>
     <% if studentdirector.present? %>
@@ -30,7 +30,7 @@
     <%= image_tag(apartmenttype["poster_url"],"width"=> 240) %>
   </div>
 
-</div>  
+</div>
 <hr>
 
 
@@ -40,21 +40,21 @@
 
     <% userpreferences = Userpreference.where("apartmenttype_id" => apartmenttype["id"]) %>
 
-    
+
      <% userpreferences.each do |userpreference| %>
-        
-            
+
+
             <% userprofile = Userprofile.find_by("id" => userpreference["userprofile_id"]) %>
-        
+
         <% if userprofile.present? %>
           <h4> <ul>
             <%= link_to userprofile["name"], "/userprofiles/#{userprofile["id"]}" %>
             wants to live in this apartment with the preference of "
             <%= userpreference["preference"] %>"
           </ul> </h4>
-        <% end %>      
-    
-  
+        <% end %>
+
+
     <% end %>
     </ul>
 
@@ -66,23 +66,23 @@
       <p>You are the first to write a review!</p>
     <% end %>
 
-   
+
     <% Review.where("apartmenttype_id" => apartmenttype["id"]).each do |review| %>
       <% the_user = User.find_by("id" => review["user_id"]) %>
-      
-        
-          <h4> <ul> 
+
+
+          <h4> <ul>
             <% if the_user.present? %>
               Rating: <%= review.rating %>, Comment:
           <% end %>
-        
+
         <% if review.present? %>
           <%= review.content %>
         <% else %> has not provided comments
          <% end %>
 
-          </h4> </ul> 
-      
+          </h4> </ul>
+
 
     <% end %>
 
@@ -97,18 +97,19 @@
       <%= hidden_field_tag "apartmenttype_id", apartmenttype["id"] %>
 
       <div class="form-group">
-        
+
         <%= submit_tag "Please enter a review below and click to submit", "class" => "btn btn-md btn-primary" %>
-        
+
         <p>
         <%= text_area_tag :content, "", "class" => "form-control", "placeholder" => "Please provide your comments!", "rows" => "col-md-4" %>
-        
+
         <%= label_tag :rating %>
         <%= select_tag :rating, options_for_select(['5 stars','4 stars','3 stars','2 stars','1 star']) %>
         </p>
       </div>
 
-      
+
+
     <% end %>
 </p>
 

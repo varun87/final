@@ -16,3 +16,4 @@ Alternatively, you can try this sequence:
 8. rake db:seed
 9. Codeship Status https://codeship.io/projects/c42d0df0-d2f9-0131-cbcd-12e285eff8b9/status
 
+_jIuKtjV34EA28ZAJnEZlPp_NgvVh9Mel1EIfup_UDTA_Mpydr1B.MkgfJ3IiB986.whyQ--
